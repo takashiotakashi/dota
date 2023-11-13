@@ -4,14 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Dota 2 Lembretes</title>
 </head>
 <body>
-    <h1>Dota 2 Lembretes</h1>
-    <p>Tempo de Jogo: <span id="tempoDisplay">00:00</span></p>
-    <button onclick="iniciarTimer()">Iniciar Timer</button>
-    <button onclick="pausarTimer()">Pausar Timer</button>
-    <button onclick="reiniciarTimer()">Reiniciar Timer</button>
+    <div class="container">
+        <header>
+            <h1>Dota 2 Timings</h1>
+            <button id="botaoSom" onclick="toggleSom()">
+                <i class="fa-solid fa-volume-xmark"></i>
+                <i class="fa-solid fa-volume-high" style="display: none;"></i>
+            </button>
+        </header>
+
+        <div class="timer-display">
+            <p>Tempo de Jogo: <span id="tempoDisplay">00:00</span></p>
+        </div>
+
+        <div class="buttons">
+            <button onclick="iniciarTimer()">Iniciar Timer</button>
+            <button onclick="pausarTimer()">Pausar Timer</button>
+            <button onclick="reiniciarTimer()">Reiniciar Timer</button>
+            <button id="botaoRoshan" onclick="iniciarTimerRoshan()">Roshan Timer</button>
+        </div>
+
+        <div class="roshan-timer">
+            <p>Clique no Tempo de Jogo: <span id="tempoDeCliqueRoshan">--:--</span></p>
+            <p>Respawn Mínimo do Roshan (8 min): <span id="respawnMinimoRoshan">--:--</span></p>
+            <p>Respawn Máximo do Roshan (11 min): <span id="respawnMaximoRoshan">--:--</span></p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
