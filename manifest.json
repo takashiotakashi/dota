@@ -3,14 +3,14 @@
   "name": "Lembretes para Dota 2",
   "icons": [
       {
-          "src": "images/volume-xmark-solid-192.png",
+          "src": "images/volume-xmark-solid.svg",
           "sizes": "192x192",
-          "type": "image/png"
+          "type": "image/svg"
       },
       {
-          "src": "images/volume-high-solid-512.png",
+          "src": "images/volume-high-solid.svg",
           "sizes": "512x512",
-          "type": "image/png"
+          "type": "image/svg"
       }
   ],
   "start_url": "/",
