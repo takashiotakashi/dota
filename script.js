@@ -65,7 +65,11 @@ function toggleSom() {
 
 // Função para verificar e anunciar lembretes com base no tempo de jogo
 function verificarLembretes() {
-  // Implementação da verificação de lembretes
+  lembretes.forEach(lembrete => {
+    if (tempoDeJogo === lembrete.tempo) {
+        falar(lembrete.tarefa);
+    }
+});
 }
 
 
@@ -102,4 +106,18 @@ function falar(texto) {
       msg.rate = 1.5;
       window.speechSynthesis.speak(msg);
   }
+}
+
+
+// Dentro do script.js
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js')
+              .then(registration => {
+                  console.log('SW registrado:', registration);
+              })
+              .catch(registrationError => {
+                  console.log('SW falhou:', registrationError);
+              });
+  });
 }
