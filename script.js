@@ -1,3 +1,8 @@
+let audioClip = new Audio('audios/audio.mp3');
+
+// Outras variáveis e código...
+
+
 let lembretes = [
   { tempo: 5, tarefa: "Acorda caralho, é agora que o bicho vai pegar!" },
   { tempo: 20, tarefa: "lalalalalalalalalalalala" },
@@ -46,7 +51,6 @@ function reiniciarTimer() {
   iniciarTimer();
 }
 
-
 // Função para ligar e desligar o som
 function toggleSom() {
   somAtivado = !somAtivado;
@@ -61,6 +65,7 @@ function toggleSom() {
       iconeVolumeHigh.style.display = 'none';
   }
 }
+
 
 
 // Função para verificar e anunciar lembretes com base no tempo de jogo
